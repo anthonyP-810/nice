@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Button Fun Assignment</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").on("click", changecolor);
+            $("button").on("mouseover", bling_bling);
+            $("button").on("mouseout", reverse);
+        });
+
+        function reverse()
+        {
+            $("button").css('background-color', 'blue');
+        }
+
+        function bling_bling()
+        {
+            $("button").css('background-color', 'green');
+        }
+
+        function changecolor()
+        {
+            var count = 1;
+            if ($("button").css('background-color', 'blue'))
+            {
+                $("button").css('background-color', 'red');
+            }
+            else
+            {
+                $("button").css('background-color', 'blue')
+            }
+        }
+    </script>
+</head>
+<body>
+    <button style="background-color:blue;">Click Me</button>
+</body>
+</html>
